@@ -11,7 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-@WebServlet(urlPatterns = { "/favicon.ico", "/static/*" })
+@WebServlet(urlPatterns = {"/favicon.ico", "/static/*"})
 public class FileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 读取当前请求路径:
