@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html th:replace="~{layoutFile :: layout(~{::main})}">
+
+<html th:replace="~{layout :: layout(~{::main})}">
 <body>
 <main>
 
     <h3 th:if="${user} == null" )>Welcome!</h3>
-    <h3 th:if="${user} != null">Welcome *{user.name}!</h3>
+    <h3 th:if="${user} != null" th:text="|Welcome ${user.name} !|"/>
 </main>
 </body>
 </html>

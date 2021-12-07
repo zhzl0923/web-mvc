@@ -23,7 +23,7 @@ public class UserController {
                     new User("tom@example.com", "tomcat", "Tom", "This is tom.")
             );
             users.forEach(user -> {
-                put(user.username, user);
+                put(user.email, user);
             });
         }
     };
@@ -36,7 +36,7 @@ public class UserController {
     @PostMapping("/sign_in")
     public ModelAndView doSignIn(SignInBean bean, HttpServletResponse response, HttpSession session)
             throws IOException {
-        User user = userDatabase.get(bean.username);
+        User user = userDatabase.get(bean.email);
         if (user == null || !user.password.equals(bean.password)) {
             response.setContentType("application/json");
             PrintWriter pw = response.getWriter();

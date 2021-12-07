@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html th:replace="~{layoutFile :: layout(~{::main})}">
+<html th:replace="~{layout :: layout(~{::main})}">
 <body>
 <main>
-    <h3 th:text="Hello, ${name} "></h3>
+    <h3 th:text="|Hello, ${name}|"></h3>
 </main>
 </body>
 </html>

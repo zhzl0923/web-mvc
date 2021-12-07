@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html th:replace="~{layoutFile :: layout(~{::main})}">
+<html th:replace="~{layout :: layout(~{::main})}">
 <body>
 <main>
     <h3>Profile</h3>
-
-    <p>Email: {{ user.email }}</p>
-    <p>Name: {{ user.name }}</p>
-    <p>Description: {{ user.description }}</p>
+    <p th:text="|Email: ${user.email}|"></p>
+    <p th:text="|Name: ${user.name}|"></p>
+    <p th:text="|Description: ${user.description}|"></p>
 </main>
 </body>
 </html>
